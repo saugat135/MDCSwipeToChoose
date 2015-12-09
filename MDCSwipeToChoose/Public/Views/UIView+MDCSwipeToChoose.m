@@ -59,8 +59,10 @@ const void * const MDCViewStateKey = &MDCViewStateKey;
         CGPoint translation = [self mdc_translationExceedingThreshold:self.mdc_options.threshold
                                                             direction:direction];
         self.center = MDCCGPointAdd(self.center, translation);
-        [self mdc_rotateForTranslation:translation
-                     rotationDirection:MDCRotationAwayFromCenter];
+        // TODO: - Uncomment following line to allow rotation of View on pan.
+        
+//        [self mdc_rotateForTranslation:translation
+//                     rotationDirection:MDCRotationAwayFromCenter];
         [self mdc_executeOnPanBlockForTranslation:translation];
     };
 
