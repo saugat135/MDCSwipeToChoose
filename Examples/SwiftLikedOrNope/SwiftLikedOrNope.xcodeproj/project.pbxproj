@@ -183,6 +183,7 @@
 				8AC17D9D1AC7366A004E6D2D /* Frameworks */,
 				8AC17D9E1AC7366A004E6D2D /* Resources */,
 				00D6E888F9ACE2C401C9D7E2 /* Copy Pods Resources */,
+				1B4B2AC0DC2A7E74A07C0B3C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -217,7 +218,8 @@
 		8AC17D981AC7366A004E6D2D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftMigration = 0700;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Richard Burdish";
 				TargetAttributes = {
@@ -283,6 +285,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B4B2AC0DC2A7E74A07C0B3C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ED9542BEA5B879E582ADD34D /* Check Pods Manifest.lock */ = {

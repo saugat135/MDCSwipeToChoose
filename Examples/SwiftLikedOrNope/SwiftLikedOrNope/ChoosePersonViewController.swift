@@ -34,7 +34,7 @@ class ChoosePersonViewController: UIViewController, MDCSwipeToChooseDelegate {
     var frontCardView:ChoosePersonView!
     var backCardView:ChoosePersonView!
     
-    required init?(coder aDecoder: NSCoder) {
+    required init?;?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.people = defaultPeople()
     }
@@ -42,6 +42,10 @@ class ChoosePersonViewController: UIViewController, MDCSwipeToChooseDelegate {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.people = defaultPeople()
         // Here you can init your properties
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     
@@ -72,7 +76,7 @@ class ChoosePersonViewController: UIViewController, MDCSwipeToChooseDelegate {
     // This is called when a user didn't fully swipe left or right.
     func viewDidCancelSwipe(view: UIView) -> Void{
         
-        print("You couldn't decide on \(self.currentPerson.Name)");
+        print("You couldn't decide on \(self.currentPerson.Name)", terminator: "");
     }
     
     // This is called then a user swipes the view fully left or right.
