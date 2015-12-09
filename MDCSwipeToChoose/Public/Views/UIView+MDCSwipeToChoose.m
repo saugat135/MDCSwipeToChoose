@@ -253,8 +253,9 @@ const void * const MDCViewStateKey = &MDCViewStateKey;
         // the updates via the pan block.
         CGPoint translation = [panGestureRecognizer translationInView:view];
         view.center = MDCCGPointAdd(self.mdc_viewState.originalCenter, translation);
-        [self mdc_rotateForTranslation:translation
-                     rotationDirection:self.mdc_viewState.rotationDirection];
+        // TODO: - Uncomment following line to allow rotation on pan
+//        [self mdc_rotateForTranslation:translation
+//                     rotationDirection:self.mdc_viewState.rotationDirection];
         [self mdc_executeOnPanBlockForTranslation:translation];
     }
 }
