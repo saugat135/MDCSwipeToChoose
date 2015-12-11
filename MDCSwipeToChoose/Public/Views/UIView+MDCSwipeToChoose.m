@@ -58,6 +58,8 @@ const void * const MDCViewStateKey = &MDCViewStateKey;
     void (^animations)(void) = ^{
         CGPoint translation = [self mdc_translationExceedingThreshold:self.mdc_options.threshold
                                                             direction:direction];
+        // TODO: - Remove the following line to allow panning in y-axis as well.
+        translation.y = 0;
         self.center = MDCCGPointAdd(self.center, translation);
         // TODO: - Uncomment following line to allow rotation of View on pan.
         
@@ -252,6 +254,8 @@ const void * const MDCViewStateKey = &MDCViewStateKey;
         // Update the position and transform. Then, notify any listeners of
         // the updates via the pan block.
         CGPoint translation = [panGestureRecognizer translationInView:view];
+        // TODO: - remove the following line of code to enable panning in y axis as well.
+        translation.y = 0;
         view.center = MDCCGPointAdd(self.mdc_viewState.originalCenter, translation);
         // TODO: - Uncomment following line to allow rotation on pan
 //        [self mdc_rotateForTranslation:translation
